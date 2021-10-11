@@ -9,7 +9,8 @@ def test_should_return_fizz():
     assert result(6) == "fizz"
 
 def test_given_float_should_return_fizz():
-    assert result(3.3) == "fizz"
+    with pytest.raises(NotImplementedError):
+        result(3.3)
 
 def test_should_raise_execution_error():
     with pytest.raises(TypeError):
