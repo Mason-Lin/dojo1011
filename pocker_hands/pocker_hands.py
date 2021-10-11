@@ -7,16 +7,26 @@ class PokerGame:
 
     def parse_card_number(self, cards):
         splited = cards.split(" ")
-        first_char =[i[0] for i in splited]
+        first_char =[i[:-1] for i in splited]
+        suit = [i[-1] for i in splited]
         mapping = {
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 5,
+            "6": 6,
+            "7": 7,
+            "8": 8,
+            "9": 9,
+            "10": 10,
             "J": 11,
             "Q": 12,
             "K": 13,
             "A": 14
         }
-        numbers = [mapping[i] for i in first_char]
+        numbers = [{ 'number': mapping[i], 'suit': j } for i, j in zip(first_char, suit)]
         return numbers
 
     def result(self):
-        for card in self.cards1:
+        raise NotImplemented
 
