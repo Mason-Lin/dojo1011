@@ -7,6 +7,9 @@ def test_should_return_fizz():
     assert result(3) == "fizz"
     assert result(6) == "fizz"
 
+def test_should_raise_execution_error():
+    raise NotImplemented
+
 def test_should_return_number():
     assert result(1) == "1"
     assert result(2) == "2"
