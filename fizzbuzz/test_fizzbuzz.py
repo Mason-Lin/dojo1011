@@ -13,3 +13,4 @@ def test_should_return_number():
 
 def test_should_return_buzz():
     assert result(5) == "buzz"
+    assert result(10) == "buzz"
