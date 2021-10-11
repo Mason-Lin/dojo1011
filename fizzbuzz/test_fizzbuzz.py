@@ -1,6 +1,7 @@
 """
     http://codingdojo.org/kata/FizzBuzz/
 """
+import pytest 
 from fizzbuzz import result
 
 def test_should_return_fizz():
@@ -8,7 +9,8 @@ def test_should_return_fizz():
     assert result(6) == "fizz"
 
 def test_should_raise_execution_error():
-    raise NotImplemented
+    with pytest.raises(TypeError):
+        result(None)
 
 def test_should_return_number():
     assert result(1) == "1"
