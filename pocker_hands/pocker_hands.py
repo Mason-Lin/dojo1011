@@ -28,5 +28,10 @@ class PokerGame:
         return numbers
 
     def result(self):
-        raise NotImplemented
+        highest1 = max([item['number'] for item in self.cards1])
+        highest2 = max([item['number'] for item in self.cards2])
+
+        if highest2 > highest1:
+            return f"{self.player2} wins. - with high card: A"
+
 
